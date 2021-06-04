@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 :root {
     --bodyFont: 'Roboto', sans-serif;
@@ -80,7 +80,8 @@ header p {
     font-size: 3rem;
     margin-bottom: 30px;
 }
-.intro .row:first-child::after {
+.intro .row:first-child::after, 
+hr {
     display: block;
     content: "";
     width: 50%;
@@ -91,7 +92,7 @@ header p {
 .intro .row:nth-child(2) {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    flex-wrap: wrap;
 }
 .intro .row:last-child div {
     flex: 0 0 30%;
@@ -102,4 +103,87 @@ header p {
 }
 .intro h3 {
     font-size: 2rem;
+}
+
+/* blog */
+.blog {
+    padding: var(--padding);
+    background: var(--lightgray);
+}
+.blog article.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog img {
+    width: 100%;
+    box-shadow: 4px 4px var(--blue);
+    border-radius: 50px 50px 50px 0;
+    transition: var(--transition);
+}
+.blog img:hover {
+    box-shadow: 4px 4px var(--gray);
+}
+.blog div {
+    flex: 0 0 47%;
+}
+.blog h3 {
+    font-size: 2rem;
+}
+.blog p {
+    text-align: justify;
+}
+
+/* footer */
+footer {
+    padding: var(--padding);
+    background: var(--gray);
+    text-align: center;
+    color: var(--lightgray);
+}
+footer a {
+    font-size: 2rem;
+    color: var(--blue);
+    margin: 10px;
+    transition: var(--transition);
+}
+footer a:hover {
+    color: var(--bodyColor);
+}
+footer p {
+    font-weight: 100;
+}
+footer h2 {
+    font-size: 2.5rem;
+}
+
+
+
+/* responsive */
+@media(min-width: 768px) and (max-width: 1024px) {
+    .intro .row:last-child div,
+    .blog div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 4.5rem;
+    }
+    header {
+        height: 50vh;
+    }
+    .intro h2 {
+        font-size: 2rem;
+    }
+    .intro .row:last-child div,
+    .blog div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
 }
