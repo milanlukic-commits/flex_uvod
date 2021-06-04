@@ -84,12 +84,12 @@ header p {
 hr {
     display: block;
     content: "";
-    width: 50%;
+    width: 30%;
     height: 1px;
     background: var(--lightgray);
     margin: 40px auto;
 }
-.intro .row:nth-child(2) {
+.intro .row:last-child {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -141,17 +141,18 @@ footer {
     text-align: center;
     color: var(--lightgray);
 }
-footer a {
+footer a i {
     font-size: 2rem;
     color: var(--blue);
     margin: 10px;
     transition: var(--transition);
 }
-footer a:hover {
+footer a i:hover {
     color: var(--bodyColor);
 }
 footer p {
     font-weight: 100;
+    margin-bottom: 20px;
 }
 footer h2 {
     font-size: 2.5rem;
