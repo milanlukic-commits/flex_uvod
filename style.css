@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 :root {
     --bodyFont: 'Roboto', sans-serif;
     --bodyColor: #777777;
@@ -27,12 +28,78 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
+.container {
+    width: 80%;
+    margin: auto;
+}
+button {
+    background: var(--blue);
+    border: none;
+    padding: 10px 30px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: var(--white);
+    border-radius: 20px 20px 20px 0;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--gray);
+}
 
 /* header */
 header {
-    background-image: url(img/header.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(255, 255, 255, .99)) url(img/header.jpg);
     height: 70vh;
     background-position: center;
     background-size: cover;
     border-top: 10px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: var(--white);
+    text-shadow: 2px 2px var(--gray);
+}
+header p {
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+/* intro */
+.intro {
+    padding: var(--padding);
+    text-align: center;
+}
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.intro .row:first-child::after {
+    display: block;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: var(--lightgray);
+    margin: 40px auto;
+}
+.intro .row:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.intro .row:last-child div {
+    flex: 0 0 30%;
+}
+.intro i {
+    color: var(--blue);
+    font-size: 3rem;
+}
+.intro h3 {
+    font-size: 2rem;
 }
