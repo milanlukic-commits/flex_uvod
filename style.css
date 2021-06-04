@@ -10,8 +10,29 @@
     --padding: 100px 0;
     --transition: .3s ease;
 }
+
+/* basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    color: var(--bodyColor);
+    font-weight: 300;
+    line-height: 1.8;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+/* header */
+header {
+    background-image: url(img/header.jpg);
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    border-top: 10px solid var(--gray);
 }
